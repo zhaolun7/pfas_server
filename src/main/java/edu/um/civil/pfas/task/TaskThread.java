@@ -13,7 +13,7 @@ public class TaskThread implements Runnable{
     public void run() {
         Process proc;
         try {
-            String[] args1 = new String[] { "/usr/bin/python3", "python/KMD_MONGO_TASK.py", task_id};
+            String[] args1 = new String[] { "/usr/local/bin/python3", "python/KMD_MONGO_TASK.py", task_id};
             proc=Runtime.getRuntime().exec(args1);
             //用输入输出流来截取结果
             BufferedReader in = new BufferedReader(new InputStreamReader(proc.getInputStream()));
