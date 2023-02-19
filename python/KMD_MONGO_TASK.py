@@ -47,7 +47,7 @@ def readMongoFromIni():
     MONGO_PORT = section.get('MONGO_PORT')
     MONGO_DATABASE = section.get('MONGO_DATABASE')
     MONGO_COLLECTION = section.get('MONGO_COLLECTION')
-    COMMOM_FILE_PATH = section.get('COMMOM_FILE_PATH')
+    COMMOM_FILE_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)),section.get('COMMOM_FILE_PATH'))
 
     print(MONGO_HOST,MONGO_PORT,MONGO_DATABASE,MONGO_COLLECTION,COMMOM_FILE_PATH)
 
